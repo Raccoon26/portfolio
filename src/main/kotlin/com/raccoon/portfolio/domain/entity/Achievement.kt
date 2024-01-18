@@ -19,7 +19,7 @@ class Achievement(title: String,
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "achievement_id")
-    var id: Long? = null;
+    var id: Long? = null
 
     var title: String = title
 

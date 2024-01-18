@@ -8,15 +8,12 @@ import jakarta.persistence.Id
 
 @Entity
 class Link(
-        name: String,
-        content: String,
-        isActive: Boolean
-): BaseEntity() {
+        name: String, content: String, isActive: Boolean): BaseEntity() {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "link_id")
-    var id: Long? = null;
+    var id: Long? = null
 
     var name: String = name
 

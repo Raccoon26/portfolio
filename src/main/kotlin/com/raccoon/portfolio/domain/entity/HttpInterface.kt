@@ -13,7 +13,7 @@ class HttpInterface(httpServletRequest: HttpServletRequest): BaseEntity() {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "http_interface_id")
-    var id: Long? = null;
+    var id: Long? = null
 
     var cookies: String? = httpServletRequest.cookies
             ?.map { "${it.name}:${it.value}" }
