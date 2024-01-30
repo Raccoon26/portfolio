@@ -1,6 +1,7 @@
 package com.raccoon.portfolio.domain.entity
 
 import jakarta.persistence.*
+import jakarta.servlet.http.HttpSession
 
 @Entity
 class Experience(
