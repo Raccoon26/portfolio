@@ -35,6 +35,7 @@ class PresentationApiController(
         return presentationService.getResume()
     }
 
+    @GetMapping("/v1/projects")
     fun getProjects(): List<ProjectDTO> {
         return presentationService.getProjects()
     }
