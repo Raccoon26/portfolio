@@ -91,7 +91,7 @@ class DataInitializer(
         //skill 초기화
         val c = Skill(name = "C#", type = SkillType.LANGUAGE.name, isActive = true)
         val cplus = Skill(name = "C++", type = SkillType.LANGUAGE.name, isActive = true)
-        val rust = Skill(name = "RUST", type = SkillType.LANGUAGE.name, isActive = true)
+        val rust = Skill(name = "Rust", type = SkillType.LANGUAGE.name, isActive = true)
         val net = Skill(name = ".NET", type = SkillType.FRAMEWORK.name, isActive = true)
         val axum = Skill(name = "Axum", type = SkillType.FRAMEWORK.name, isActive = true)
         val mssql = Skill(name = "MsSQL", type = SkillType.DATABASE.name, isActive = true)
