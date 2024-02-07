@@ -21,6 +21,7 @@ data class SkillForm(
             isActive = this.isActive
         )
     }
+
     fun toEntity(id: Long): Skill {
         val skill = this.toEntity()
         skill.id = id

@@ -16,28 +16,28 @@ class AdminDashboardService(
 ) {
 
     fun getHttpInterfaceTable(): TableDTO {
-        var pageRequest = PageRequest.of(0,100,Sort.Direction.DESC,"id")
+        val pageRequest = PageRequest.of(0, 100, Sort.Direction.DESC, "id")
 
-        var classInfo = HttpInterface::class
-        var entities = httpInterfaceRepository.findAll(pageRequest).content
+        val classInfo = HttpInterface::class
+        val entities = httpInterfaceRepository.findAll(pageRequest).content
 
         return TableDTO.from(classInfo, entities)
     }
 
-    fun countVisitorsTotal(): Long{
+    fun countVisitorsTotal(): Long {
         return httpInterfaceRepository.count()
     }
 
-    fun countVisitorsWeekly(): Long{
+    fun countVisitorsWeekly(): Long {
         var today = LocalDate.now()
         var startDay = today.minusDays(6)
 
         return httpInterfaceRepository.countAllByCreatedDateTimeBetween(startDay.atStartOfDay(), today.atTime(LocalTime.MAX))
     }
 
-    fun countVisitorsToday(): Long{
+    fun countVisitorsToday(): Long {
         var today = LocalDate.now()
 
-        return httpInterfaceRepository.countAllByCreatedDateTimeBetween(today.atStartOfDay(),today.atTime(LocalTime.MAX))
+        return httpInterfaceRepository.countAllByCreatedDateTimeBetween(today.atStartOfDay(), today.atTime(LocalTime.MAX))
     }
 }

@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional
 class AdminAchievementService(
     private val achievementRepository: AchievementRepository
 ) {
+
     fun getAchievementTable(): TableDTO {
         val classInfo = Achievement::class
         val entities = achievementRepository.findAll()
