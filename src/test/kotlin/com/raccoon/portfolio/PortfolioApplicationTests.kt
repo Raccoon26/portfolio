@@ -11,9 +11,4 @@ class PortfolioApplicationTests {
 	@Test
 	fun contextLoads() {
 	}
-	@Test
-	fun test(){
-		val encrypted = BCryptPasswordEncoder().encode("mewhan")
-		println(encrypted)
-	}
 }
