@@ -23,11 +23,11 @@ class   DataInitializer(
     @PostConstruct
     fun initializeData(){
 
-        println("스프링 실행, 데이터 초기화")
+        println("Spring run, Initializing data")
 
         val achievements = mutableListOf<Achievement>(
                 Achievement(
-                        title = "2021 해킹대회 우수상",
+                        title = "2021 Hacking contest Prize",
                         description = "Jeopardy, Attack-Defence, Hack-quest",
                         host = "CTFtime",
                         achievedDate = LocalDate.of(2021, 8, 1),
@@ -44,9 +44,9 @@ class   DataInitializer(
         achievementRepository.saveAll(achievements)
 
         val introductions = mutableListOf<Introduction>(
-                Introduction(content = "주도적으로 문제를 찾고, 해결하는 개발자입니다.", isActive = true),
-                Introduction(content = "기술을 위한 기술이 아닌, 사람의 흥미를 끄는 기술을 추구합니다.", isActive = true),
-                Introduction(content = "기존 소스를 리팩토링하여 더 좋은 구조로 개선하는 작업을 좋아합니다.", isActive = true),
+                Introduction(content = "a developer who takes the initiative in finding and solving problems. ", isActive = true),
+                Introduction(content = "It pursues skills that interest people, not skills for technology. ", isActive = true),
+                Introduction(content = "I like the work of refactoring existing sources and improving them to a better structure. ", isActive = true),
                 Introduction(content = "33raccoon33@gmail.com", isActive = true)
         )
         introductionRepository.saveAll(introductions)
@@ -58,8 +58,8 @@ class   DataInitializer(
         linkRepository.saveAll(links)
 
         val experience1 = Experience(
-                title = "원광대학교(Wonkwang Univ.)",
-                description = "컴퓨터과학 전공",
+                title = "Wonkwang University",
+                description = "Computer Software Engineering",
                 startYear = 2018,
                 startMonth = 2,
                 endYear = 2024,
@@ -68,14 +68,14 @@ class   DataInitializer(
         )
         experience1.addDetails(
                 mutableListOf(
-                        ExperienceDetail(content = "멋쟁이 사자처럼 운영진", isActive = true),
-                        ExperienceDetail(content = "소프트웨어 연구 학회 활동", isActive = true)
+                        ExperienceDetail(content = "Computer Study Club Management", isActive = true),
+                        ExperienceDetail(content = "Game Server Study", isActive = true)
                 )
         )
         val experience2 = Experience(
                 title = "Paper Village",
-                description = "유니티 게임 서버 개발자",
-                startYear = 2015,
+                description = "Unity Game Server Developer",
+                startYear = 2020,
                 startMonth = 9,
                 endYear = null,
                 endMonth = null,
@@ -83,8 +83,8 @@ class   DataInitializer(
         )
         experience2.addDetails(
                 mutableListOf(
-                        ExperienceDetail(content = "C#, RUST 기반 게임 서버 개발", isActive = true),
-                        ExperienceDetail(content = "Entity Framework Core 개발", isActive = true)
+                        ExperienceDetail(content = "C#, RUST based game server development", isActive = true),
+                        ExperienceDetail(content = "Entity Framework Core development", isActive = true)
                 )
         )
         experienceRepository.saveAll(mutableListOf(experience1, experience2))
@@ -103,8 +103,8 @@ class   DataInitializer(
         // project / project_detail / project_skill 초기화
 
         val project1 = Project(
-                name = "고성능 게임 서버 개발",
-                description = "대규모 온라인 게임 고성능 서버 개발",
+                name = "Developing a high-performance gaming server",
+                description = "Large-scale traffic online gaming server",
                 startYear = 2018,
                 startMonth = 6,
                 endYear = null,
@@ -113,8 +113,8 @@ class   DataInitializer(
         )
         project1.addDetails(
                 mutableListOf(
-                        ProjectDetail(content = "C#, Rust를 활용하여 대규모 트래픽 서버 개발", url = null, isActive = true),
-                        ProjectDetail(content = "WebSocket, UDP등을 활용한 실시간 통신", url = null, isActive = true)
+                        ProjectDetail(content = "Develop large-scale traffic servers with C#, Rust", url = null, isActive = true),
+                        ProjectDetail(content = "Real-time communication using WebSocket, UDP, etc", url = null, isActive = true)
                 )
         )
         project1.skills.addAll(
@@ -126,8 +126,8 @@ class   DataInitializer(
                 )
         )
         val project2 = Project(
-                name = "엘리스 팡",
-                description = "Rookiss님 게임 모작",
+                name = "Elise Pang",
+                description = "Rookiss Internet lecture",
                 startYear = 2024,
                 startMonth = 1,
                 endYear = null,
@@ -136,8 +136,8 @@ class   DataInitializer(
         )
         project2.addDetails(
                 mutableListOf(
-                        ProjectDetail(content = "Unity 엔진을 활용하여 개발", url = null, isActive = true),
-                        ProjectDetail(content = "신규 기능 추가 예정", url = null, isActive = true),
+                        ProjectDetail(content = "Developing with Unity Engine", url = null, isActive = true),
+                        ProjectDetail(content = "New feature update scheduled", url = null, isActive = true),
                         ProjectDetail(content = "Github Repository", url = "https://github.com/Raccoon26", isActive = true)
                 )
         )
